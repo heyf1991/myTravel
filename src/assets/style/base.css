@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+}
+input[type='text'] {
+  font-family: '微软雅黑';
+  padding: 0 0.1rem;
+  color: #333;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999;
+  font-size: 0.14rem;
+}

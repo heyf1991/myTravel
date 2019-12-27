@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import './assets/style/reset.css'
 import './assets/style/border.css'
+import './assets/style/base.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
@@ -15,5 +16,5 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })
