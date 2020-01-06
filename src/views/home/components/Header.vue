@@ -7,10 +7,10 @@
       <i class="iconfont iconsousuo"></i>
       <input type="text" placeholder="请输入城市/景点/游玩主题" />
     </div>
-    <div class="header-right">
+    <router-link class="header-right" tag="div" to="/city">
       <span>城市</span>
       <i class="iconfont iconxiaosanjiao"></i>
-    </div>
+    </router-link>
   </header>
 </template>
 <script>

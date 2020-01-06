@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <Header></Header>
     <Swiper></Swiper>
     <Icons class="mt10 mb10"></Icons>
