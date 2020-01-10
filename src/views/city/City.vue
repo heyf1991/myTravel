@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <Header :back="true"><span slot="title">城市选择</span></Header>
-    <Search></Search>
+    <Search :cities="cityData"></Search>
     <City-list :cityData="cityData" :letter="letter"></City-list>
     <Alphabet :alphabetData="cityData" @changeAlphabet="changeAlphabet"></Alphabet>
   </div>
