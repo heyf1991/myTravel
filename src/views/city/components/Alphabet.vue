@@ -10,6 +10,9 @@ export default {
   data() {
     return {
       touchStatus: false,
+      positionStart: 0,
+      alphabetArr: [],
+      timer: null,
     }
   },
   props: {
@@ -17,9 +20,10 @@ export default {
       type: [Object, Array],
     },
   },
-  components: {},
-  created() {},
-  computed: {},
+  updated() {
+    this.positionStart = this.$refs['A'][0].offsetTop
+    this.alphabetArr = Object.keys(this.alphabetData.cities)
+  },
   methods: {
     alphabetClick(e) {
       this.$emit('changeAlphabet', e.target.innerText)
@@ -29,13 +33,14 @@ export default {
     },
     handleTouchMove(e) {
       if (this.touchStatus) {
-        let positionStart = this.$refs['A'][0].offsetTop
-        let touchY = e.touches[0].clientY
-        let index = Math.floor((touchY - positionStart - 80) / 20)
-        let alphabetArr = Object.keys(this.alphabetData.cities)
-        if (index >= 0 && index < alphabetArr.length) {
-          this.$emit('changeAlphabet', alphabetArr[index])
-        }
+        if (this.timer) clearTimeout(this.timer)
+        this.timer = setTimeout(() => {
+          let touchY = e.touches[0].clientY
+          let index = Math.floor((touchY - this.positionStart - 80) / 20)
+          if (index >= 0 && index < this.alphabetArr.length) {
+            this.$emit('changeAlphabet', this.alphabetArr[index])
+          }
+        }, 16)
       }
     },
     handleTouchEnd() {
