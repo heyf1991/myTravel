@@ -1,9 +1,9 @@
 <template>
   <div class="search">
     <div class="city-search-box">
-      <input type="text" v-model="keyword" class="city-search" placeholder="请输入城市名或者拼音" />
+      <input type="text" v-model="keyword" class="city-search colorWhite" placeholder="请输入城市名或者拼音" />
     </div>
-    <div class="search-content" ref="scontent" v-show="keyword">
+    <div class="search-content opacity" ref="scontent" v-show="keyword">
       <ul>
         <li v-for="item in list" :key="item.id">{{ item.name }}</li>
         <li v-show="noData">暂无匹配数据</li>
@@ -13,6 +13,7 @@
 </template>
 <script>
 import BScroll from 'better-scroll'
+import $ from 'jquery'
 export default {
   props: {
     cities: {
@@ -50,12 +51,14 @@ export default {
   created() {},
   mounted() {
     // 为了可以使用better-scroll修改的bug
-    this.keyword = 'a'
+    this.keyword = 'a' // better-scroll bug
     let t = setTimeout(() => {
       this.scroll = new BScroll(this.$refs.scontent, {})
       clearTimeout(t)
-      this.keyword = ''
-    }, 105)
+      this.keyword = '' // better-scroll bug
+      $('.search-content').removeClass('opacity') // better-scroll bug
+      $('.city-search').removeClass('colorWhite') // better-scroll bug
+    }, 150)
   },
   computed: {
     noData() {
@@ -100,5 +103,8 @@ export default {
 }
 .opacity{
   opacity 0
+}
+.colorWhite{
+  color #fff
 }
 </style>

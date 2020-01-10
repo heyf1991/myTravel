@@ -78,6 +78,64 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@better-scroll/core@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/core/-/core-2.0.0-beta.4.tgz#c3dbdbbb4880d6b84211a8e503e692d1016dbb9d"
+  dependencies:
+    "@better-scroll/shared-utils" "^2.0.0-beta.4"
+
+"@better-scroll/mouse-wheel@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/mouse-wheel/-/mouse-wheel-2.0.0-beta.4.tgz#b02de7dea5e7d9568d92ff57251e0e2a470df968"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/observe-dom@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/observe-dom/-/observe-dom-2.0.0-beta.4.tgz#1a22e20ede28fe3d8b07d8cdd4b8a49d67be6f70"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/pull-down@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/pull-down/-/pull-down-2.0.0-beta.4.tgz#5828b0740f888680d1681fe3d09a4eebcf6c9374"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/pull-up@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/pull-up/-/pull-up-2.0.0-beta.4.tgz#7522c6ad2f3ca6e2b49f8547fd12b06c546994b7"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/scroll-bar@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/scroll-bar/-/scroll-bar-2.0.0-beta.4.tgz#27f73ae6acf40bbc211d1854b85d8a69061e180e"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/shared-utils@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/shared-utils/-/shared-utils-2.0.0-beta.4.tgz#dc17c056b8c3e63257ca8171054a0dbc61f2d35c"
+
+"@better-scroll/slide@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/slide/-/slide-2.0.0-beta.4.tgz#c2d6bb3f8899c551e73780580cbf2dbce5bfdf2d"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/wheel@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/wheel/-/wheel-2.0.0-beta.4.tgz#c2c0d805b80e912c94bfd5b699ca7f4d56055aaf"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
+"@better-scroll/zoom@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@better-scroll/zoom/-/zoom-2.0.0-beta.4.tgz#1f4831ab88d0f80882694696c9c81193c1152a3f"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
@@ -305,6 +363,12 @@ autoprefixer@^7.1.2:
     num2fraction "^1.2.2"
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
+
+axios@^0.19.0:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.1.tgz#8a6a04eed23dfe72747e1dd43c604b8f1677b5aa"
+  dependencies:
+    follow-redirects "1.5.10"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -924,6 +988,20 @@ base@^0.11.1:
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
+
+better-scroll@^2.0.0-beta.4:
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/better-scroll/-/better-scroll-2.0.0-beta.4.tgz#8127fff3f865a1e0a7311ae6d0b050becdddc8a9"
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.4"
+    "@better-scroll/mouse-wheel" "^2.0.0-beta.4"
+    "@better-scroll/observe-dom" "^2.0.0-beta.4"
+    "@better-scroll/pull-down" "^2.0.0-beta.4"
+    "@better-scroll/pull-up" "^2.0.0-beta.4"
+    "@better-scroll/scroll-bar" "^2.0.0-beta.4"
+    "@better-scroll/slide" "^2.0.0-beta.4"
+    "@better-scroll/wheel" "^2.0.0-beta.4"
+    "@better-scroll/zoom" "^2.0.0-beta.4"
 
 bfj-node4@^5.2.0:
   version "5.3.1"
@@ -1906,6 +1984,12 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
+debug@=3.1.0, debug@~3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  dependencies:
+    ms "2.0.0"
+
 debug@^3.0.0, debug@^3.1.0, debug@^3.1.1:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
@@ -1917,12 +2001,6 @@ debug@^4.1.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   dependencies:
     ms "^2.1.1"
-
-debug@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  dependencies:
-    ms "2.0.0"
 
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
@@ -2752,6 +2830,12 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  dependencies:
+    debug "=3.1.0"
+
 follow-redirects@^1.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.9.0.tgz#8d5bcdc65b7108fe1508649c79c12d732dcedb4f"
@@ -3488,6 +3572,10 @@ isobject@^2.0.0:
 isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+
+jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
 
 js-base64@^2.1.9:
   version "2.5.1"
