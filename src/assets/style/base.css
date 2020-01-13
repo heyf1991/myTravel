@@ -35,3 +35,22 @@ textarea::-webkit-input-placeholder {
 .mb10 {
   margin-bottom: 0.1rem;
 }
+.pb5 {
+  padding-bottom: 0.05rem;
+}
+.bg-gray {
+  background: #f4f4f4;
+}
+.section-title {
+  padding: 0 0.1rem;
+  line-height: 0.4rem;
+}
+.scroll-content {
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  top: 0.45rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

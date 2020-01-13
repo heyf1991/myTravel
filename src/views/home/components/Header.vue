@@ -3,24 +3,27 @@
     <div class="header-left">
       <i class="iconfont iconfanhui"></i>
     </div>
+    <router-link class="header-right" tag="div" to="/city">
+      <span>{{ this.city }}</span>
+      <i class="iconfont iconxiaosanjiao"></i>
+    </router-link>
     <div class="header-input">
       <i class="iconfont iconsousuo"></i>
       <input type="text" placeholder="请输入城市/景点/游玩主题" />
     </div>
-    <router-link class="header-right" tag="div" to="/city">
-      <span>城市</span>
-      <i class="iconfont iconxiaosanjiao"></i>
-    </router-link>
   </header>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {}
   },
   components: {},
   created() {},
-  computed: {},
+  computed: {
+    ...mapState(['city']),
+  },
   methods: {},
 }
 </script>
@@ -28,17 +31,18 @@ export default {
 @import '~styles/varibles.styl'
 .header{
   height 0.45rem;
+  overflow hidden
   background $bgColor;
-  display flex
   .header-left{
     width 0.45rem
     text-align center
     line-height 0.45rem;
     color #fff
+    float left
   }
   .header-input{
-    flex 1
     position relative
+    overflow hidden
     input{
       border-radius 10px;
       height 0.35rem;
@@ -54,9 +58,10 @@ export default {
     }
   }
   .header-right{
-    width 0.65rem
     text-align center
     line-height 0.45rem;
+    float right
+    padding 0 0.07rem
     color #fff
     i{
       margin-left: -0.02rem;

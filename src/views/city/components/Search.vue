@@ -5,7 +5,7 @@
     </div>
     <div class="search-content opacity" ref="scontent" v-show="keyword">
       <ul>
-        <li v-for="item in list" :key="item.id">{{ item.name }}</li>
+        <li v-for="item in list" :key="item.id" @click="handleChangeCity(item.name)">{{ item.name }}</li>
         <li v-show="noData">暂无匹配数据</li>
       </ul>
     </div>
@@ -14,6 +14,7 @@
 <script>
 import BScroll from 'better-scroll'
 import $ from 'jquery'
+import { mapMutations } from 'vuex'
 export default {
   props: {
     cities: {
@@ -65,7 +66,13 @@ export default {
       return !this.list.length
     },
   },
-  methods: {},
+  methods: {
+    handleChangeCity(name) {
+      this.changeCity(name)
+      this.$router.push('/home')
+    },
+    ...mapMutations(['changeCity']),
+  },
 }
 </script>
 <style lang="stylus" scoped>

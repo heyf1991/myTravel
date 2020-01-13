@@ -5,7 +5,9 @@
         <h3 class="title">当前城市</h3>
         <div class="content pd-t-r-l">
           <ul class="block-list">
-            <li><a>北京</a></li>
+            <li>
+              <a>{{ this.city }}</a>
+            </li>
           </ul>
         </div>
       </section>
@@ -14,7 +16,7 @@
         <div class="content pd-t-r-l">
           <ul class="block-list">
             <li v-for="item in cityData.hotCities" :key="item.id">
-              <a>{{ item.name }}</a>
+              <a @click="handleChangeCity(item.name)">{{ item.name }}</a>
             </li>
           </ul>
         </div>
@@ -24,7 +26,7 @@
         <div class="content">
           <ul class="item-list">
             <li v-for="(ct, index) in item" :key="index">
-              <a>{{ ct.name }}</a>
+              <a @click="handleChangeCity(ct.name)">{{ ct.name }}</a>
             </li>
           </ul>
         </div>
@@ -34,6 +36,7 @@
 </template>
 <script>
 import BScroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -64,6 +67,15 @@ export default {
         clearTimeout(t)
       }, 50)
     },
+    handleChangeCity(name) {
+      // this.$store.commit('changeCity', name)
+      this.changeCity(name)
+      this.$router.push('/home')
+    },
+    ...mapMutations(['changeCity']),
+  },
+  computed: {
+    ...mapState(['city']),
   },
 }
 </script>
