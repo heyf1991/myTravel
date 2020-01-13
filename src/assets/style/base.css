@@ -3,7 +3,7 @@
 }
 body {
   color: #333;
-  background: #eee;
+  /* background: #eee; */
 }
 input[type='text'] {
   font-family: '微软雅黑';

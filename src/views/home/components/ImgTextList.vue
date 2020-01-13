@@ -2,7 +2,7 @@
   <div>
     <h3 class="section-title">热销推荐</h3>
     <ul class="img-text-list">
-      <router-link tag="li" to="/detail">
+      <router-link tag="li" :to="{ name: 'Detail', params: { id: '0001' } }">
         <a href="javascript:;">
           <img src="https://dimg04.c-ctrip.com/images/30070k000000c9ddu1939_C_210_210.jpg" />
         </a>
@@ -12,7 +12,7 @@
           <button>查看详情</button>
         </div>
       </router-link>
-      <router-link tag="li" to="/detail">
+      <router-link tag="li" :to="{ name: 'Detail', params: { id: '0002' } }">
         <a href="javascript:;">
           <img src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_140x140_73fda71d.jpg" />
         </a>
@@ -22,7 +22,7 @@
           <button>查看详情</button>
         </div>
       </router-link>
-      <router-link tag="li" to="/detail">
+      <router-link tag="li" :to="{ name: 'Detail', params: { id: '0003' } }">
         <a href="javascript:;">
           <img src="https://dimg04.c-ctrip.com/images/300s0d0000006scvxC032_C_210_210.jpg" />
         </a>
@@ -32,7 +32,7 @@
           <button>查看详情</button>
         </div>
       </router-link>
-      <router-link tag="li" to="/detail">
+      <router-link tag="li" :to="{ name: 'Detail', params: { id: '0004' } }">
         <a href="javascript:;">
           <img src="https://dimg03.c-ctrip.com/images/fd/hotel/g6/M09/52/DE/CggYs1a0axqANcNLACBSTMszp_Q673_C_210_210.jpg" />
         </a>
@@ -42,7 +42,7 @@
           <button>查看详情</button>
         </div>
       </router-link>
-      <router-link tag="li" to="/detail">
+      <router-link tag="li" :to="{ name: 'Detail', params: { id: '0005' } }">
         <a href="javascript:;">
           <img src="https://dimg03.c-ctrip.com/images/20080a0000004mxwtA88B_C_210_210.jpg" />
         </a>
