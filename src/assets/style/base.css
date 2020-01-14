@@ -54,3 +54,7 @@ textarea::-webkit-input-placeholder {
   left: 0;
   right: 0;
 }
+.gallery .swiper-pagination {
+  color: #fff;
+  bottom: 1.8rem;
+}
