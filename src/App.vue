@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <transition name="fadeIn">
-      <router-view></router-view>
+      <keep-alive include="Detail">
+        <router-view></router-view>
+      </keep-alive>
     </transition>
   </div>
 </template>

@@ -36,9 +36,6 @@ export default {
     }
   },
   mounted() {
-    /* console.log('啦啦啦啦', this.swiper)
-
-    this.swiper.slideTo(0, 2000, false) */
     let t = setTimeout(() => {
       this.swiperOption = {
         pagination: {
@@ -79,6 +76,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index 5
   div{
     img{
       width 100%

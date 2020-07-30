@@ -10,11 +10,14 @@
         </div>
       </div>
     </div>
-    <Detail-gallery v-show="isShowGallery" @handleCloseGallery="closeGallery"></Detail-gallery>
+    <Fade-animation>
+      <Detail-gallery v-show="isShowGallery" @handleCloseGallery="closeGallery"></Detail-gallery>
+    </Fade-animation>
   </div>
 </template>
 <script>
 import DetailGallery from '@/components/Gallery.vue'
+import FadeAnimation from '@/components/Fade.vue'
 export default {
   data() {
     return {
@@ -23,6 +26,7 @@ export default {
   },
   components: {
     DetailGallery,
+    FadeAnimation,
   },
   created() {},
   computed: {},

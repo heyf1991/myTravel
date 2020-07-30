@@ -58,3 +58,13 @@ textarea::-webkit-input-placeholder {
   color: #fff;
   bottom: 1.8rem;
 }
+.cricle-back {
+  color: #fff;
+  width: 0.35rem;
+  height: 0.35rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 0.34rem;
+}
